@@ -61,7 +61,7 @@ set guifont=DroidSansMono\ Nerd\ Font:h11
 let g:repl_split = 'right'
 nnoremap <leader><leader>e :ReplToggle<CR>
 nmap <C-l> <Plug>ReplSendLine
-inoremap <C-l> <Plug>ReplSendLine
+inoremap <C-l> <ESC><Plug>ReplSendLine<CR>
 vmap <C-l> <Plug>ReplSendVisual
 let g:repl_filetype_commands = {
       \ 'python': 'bpython -q',
@@ -70,6 +70,8 @@ let g:repl_filetype_commands = {
 
 " Remap leader to space
 let g:mapleader = "\<Space>"
+
+inoremap jj <esc>
 
 " Search files
 nnoremap <C-p> :Files<Cr>
