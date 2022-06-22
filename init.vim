@@ -1,4 +1,6 @@
+set encoding=UTF-8
 set number
+set relativenumber
 set smartcase
 set incsearch
 set ignorecase
@@ -41,9 +43,17 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'preservim/nerdcommenter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'windwp/nvim-autopairs'
+Plug 'AndrewRadev/tagalong.vim'
+Plug 'easymotion/vim-easymotion' "SSw
+Plug 'alvan/vim-closetag' 
+Plug 'tpope/vim-surround'
+Plug 'tanvirtin/monokai.nvim'
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
 
 call plug#end()
+
 
 " Autocomplete
 let g:deoplete#enable_at_startup = 1
@@ -52,9 +62,7 @@ let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_trim = 1
 
 
-
-set encoding=UTF-8
-colorscheme onedark
+colorscheme monokai
 set guifont=DroidSansMono\ Nerd\ Font:h11
 
 " Repl Configuration to Python and R
@@ -65,11 +73,13 @@ inoremap <C-l> <ESC><Plug>ReplSendLine<CR>
 vmap <C-l> <Plug>ReplSendVisual
 let g:repl_filetype_commands = {
       \ 'python': 'bpython -q',
+      \ 'r': 'R'
       \ }
 
 
 " Remap leader to space
 let g:mapleader = "\<Space>"
+
 
 inoremap jj <esc>
 
@@ -84,7 +94,7 @@ nnoremap <C-b>l :bnext<CR>
 
 
 "Go Definition
-nnoremap <C-d> :LspDefinition<Cr>
+nnoremap gd :LspDefinition<Cr>
 
 " Create, open and Toggle terminal
 nnoremap <C-t>n          :FloatermNew<Cr>
@@ -156,6 +166,24 @@ vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
 
 " Coment lines
-
 nnoremap <C-c> <plug>NERDCommenterToggle
 vnoremap <C-c> <plug>NERDCommenterToggle
+
+" Split resize
+nnoremap <leader>> 10<C-w>>
+nnoremap <leader>< 10<C-w><
+
+
+" Fastes scroll
+nnoremap <C-j> 10<C-e>
+nnoremap <C-k> 10<C-y>
+nmap <leader>s <Plug>(easymotion-s2)
+
+
+" Close tags
+let g:closetag_filetypes = 'html,xhtml,phtml,javascript'
+let g:closetag_enable_react_fragment = 1
+
+
+highlight Normal     ctermbg=NONE guibg=NONE
+
