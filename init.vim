@@ -50,7 +50,11 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'glepnir/dashboard-nvim'
 
 call plug#end()
 
@@ -62,7 +66,13 @@ let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_trim = 1
 
 
-colorscheme monokai
+"colorscheme monokai
+colorscheme onehalflight
+set t_Co=256
+set cursorline
+let g:airline_theme='onehalfdark'
+let g:lightline = { 'colorscheme': 'onehalfdark' }
+
 set guifont=DroidSansMono\ Nerd\ Font:h11
 
 " Repl Configuration to Python and R
@@ -185,5 +195,5 @@ let g:closetag_filetypes = 'html,xhtml,phtml,javascript'
 let g:closetag_enable_react_fragment = 1
 
 
-highlight Normal     ctermbg=NONE guibg=NONE
+"highlight Normal     ctermbg=NONE guibg=NONE
 
