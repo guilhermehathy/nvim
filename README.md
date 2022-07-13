@@ -1,4 +1,5 @@
 # Arquivo de configuração para nvim
+```
 
 .
 ├── README.md
@@ -10,6 +11,7 @@
     │   └── paq.lua
     └── settings.lua
 
+```
 
 ## Gerenciador de pacotes
 
