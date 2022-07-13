@@ -18,6 +18,9 @@ require('paq'){
   'preservim/nerdcommenter'; --Comentar o codigo
   'folke/which-key.nvim'; -- Mostrar possibilidade de atalhos
 
+  -- Gestor de projetos
+  'leafOfTree/vim-project';
+
   --Tree
   'kyazdani42/nvim-web-devicons';
   'kyazdani42/nvim-tree.lua';
