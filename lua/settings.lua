@@ -21,13 +21,15 @@ opt.confirm = true
 opt.cursorline = true
 opt.clipboard = 'unnamedplus'
 opt.go = 'a'
+g.syntax = true
 cmd([[set scrolloff=10]])
 
 
 -- Theme
 opt.termguicolors = true
-cmd([[let ayucolor="light"]])
-cmd([[colorscheme ayu]])
+--cmd([[let ayucolor="light"]])
+--cmd([[colorscheme ayu]])
+vim.cmd[[colorscheme OceanicNext]]
 g.t_Co = 256
 
 -- Ident Line
@@ -55,3 +57,10 @@ g.closetag_enable_react_fragment = 1
 
 -- Markdown preview
 g.mkdp_filetypes ={'markdown', 'pandoc'}
+
+-- Python and R configuration
+cmd([[let g:repl_filetype_commands = {
+      \ 'python': 'bpython -q',
+      \ 'r': 'R'
+      \ }]])
+g.repl_split = 'right'

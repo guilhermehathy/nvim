@@ -57,4 +57,5 @@ require('paq'){
 
   --Temas
   'ayu-theme/ayu-vim';
+  'mhartington/oceanic-next';
 }

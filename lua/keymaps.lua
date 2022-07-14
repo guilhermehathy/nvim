@@ -59,3 +59,7 @@ map('n', '<C-k>', '10<C-y>')
 --Tree
 map('n', '<C-n>', ':NvimTreeFindFile<Cr>')
 map('n', '<C-n>t', ':NvimTreeToggle<Cr>')
+
+-- Run R and Python
+map('n', '<C-l>', '<Plug>ReplSendLine')
+map('i', '<C-l>', '<ESC><Plug>ReplSendLine<Cr>')
